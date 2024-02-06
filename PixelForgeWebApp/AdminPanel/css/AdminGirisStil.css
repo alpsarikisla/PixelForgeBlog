@@ -1,0 +1,67 @@
+﻿body {
+    font-family: Calibri;
+    background-image: url(../Resimler/loginbackground.jpg);
+    background-size: 100%;
+}
+
+.girisPanel {
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid silver;
+    width: 840px;
+    -webkit-box-shadow: 2px 11px 25px 8px rgba(0,0,0,0.16);
+    -moz-box-shadow: 2px 11px 25px 8px rgba(0,0,0,0.16);
+    box-shadow: 2px 11px 25px 8px rgba(0,0,0,0.16);
+    /*Div içindeki nesneler ile div duvarı arasındaki boşluk*/
+}
+
+    .girisPanel .sol {
+        width: 500px;
+        float: left;
+    }
+
+        .girisPanel .sol img {
+            width: 100%;
+        }
+
+    .girisPanel .sag {
+        padding: 20px;
+        width: 300px;
+        float: left;
+        background-color: white;
+        min-height: 462px;
+    }
+
+.row {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+    .row .metinKutu {
+        width: 95%;
+        font-size: 15pt;
+        padding: 7px;
+        border-radius: 7px;
+        border: 1px solid silver;
+    }
+
+    .row .girisButon {
+        padding: 10px;
+        border: 1px solid silver;
+        background-color: #3AAA35;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        padding: 10px 50px;
+        float: right;
+    }
+
+.panelHata {
+    background-color: #f89595;
+    color: white;
+    padding: 15px;
+    border-radius: 7px;
+    border: 1px solid red;
+    text-align: center;
+}

@@ -1,0 +1,60 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Calibri;
+}
+
+.ustmenu {
+    background-color: white;
+    -webkit-box-shadow: 0px 1px 16px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 16px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 16px 0px rgba(0,0,0,0.75);
+}
+
+.sayfabaslik {
+    width: 400px;
+    float: left;
+    padding: 10px;
+}
+
+.kullanicipanel {
+    width: 200px;
+    float: right;
+    padding: 10px;
+}
+
+.anatasiyici {
+}
+
+.solmenu {
+    width: 220px;
+    height: 900px;
+    float: left;
+    background-color: #01274f;
+    color: whitesmoke;
+
+}
+.solmenu ul{
+    list-style-type:none;
+}
+.solmenu ul a{
+    color:whitesmoke;
+    text-decoration:none;
+}
+
+.solmenu ul a li{
+    padding:9px 15px;
+    border-bottom:1px solid silver;
+}
+    .solmenu ul a:hover li{
+        background-color:#023c79;
+    }
+    .icerik {
+        width: 1000px;
+        height: 100%;
+        padding: 15px;
+        float: right;
+    }

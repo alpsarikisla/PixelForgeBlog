@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminPanel.master.cs" Inherits="PixelForgeWebApp.AdminPanel.AdminPanel" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Admin Panel</title>
+    <link href="css/AdminPanelStil.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="ustmenu">
+            <div class="sayfabaslik">
+                <h3>Pixel Forge Panel</h3>
+            </div>
+            <div class="kullanicipanel">
+                <asp:Label ID="lbl_kullanici" runat="server"></asp:Label>
+                <a href="#">Çıkış Yap</a>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div class="anatasiyici">
+            <div class="solmenu">
+                <ul>
+                    <a href="Default.aspx">
+                        <li>Yönetim Paneli</li>
+                    </a>
+                    <a href="Default.aspx">
+                        <li>Kategori Listesi</li>
+                    </a>
+                    <a href="Default.aspx">
+                        <li>Kategori Ekle</li>
+                    </a>
+                    <a href="Default.aspx">
+                        <li>Makale Listesi</li>
+                    </a>
+                    <a href="Default.aspx">
+                        <li>Makale Ekle</li>
+                    </a>
+                    <a href="Default.aspx">
+                        <li>Yorumlar Listesi</li>
+                    </a>
+                    <a href="Default.aspx">
+                        <li>Üyeler Listesi</li>
+                    </a>
+                    <a href="Default.aspx">
+                        <li>Kullanıcı Listesi</li>
+                    </a>
+                    <a href="Default.aspx">
+                        <li>Ayarlar</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="icerik">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+    </form>
+</body>
+</html>
+<%-- MasterPage Tek başına çalışamaz. Master page'i çağıracak bir form sayfasına ihtiyaç duyar --%>
+
