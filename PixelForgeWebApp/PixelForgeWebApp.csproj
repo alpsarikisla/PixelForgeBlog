@@ -70,7 +70,9 @@
     <Content Include="AdminPanel\AdminGiris.aspx" />
     <Content Include="AdminPanel\css\AdminGirisStil.css" />
     <Content Include="AdminPanel\css\AdminPanelStil.css" />
+    <Content Include="AdminPanel\css\FormStil.css" />
     <Content Include="AdminPanel\Default.aspx" />
+    <Content Include="AdminPanel\KategoriEkle.aspx" />
     <Content Include="AdminPanel\Resimler\loginbackground.jpg" />
     <Content Include="AdminPanel\Resimler\loginimage-01.png" />
     <Content Include="AdminPanel\Resimler\Wavy_Tech-28_Single-10.jpg" />
@@ -97,6 +99,13 @@
     </Compile>
     <Compile Include="AdminPanel\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\KategoriEkle.aspx.cs">
+      <DependentUpon>KategoriEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\KategoriEkle.aspx.designer.cs">
+      <DependentUpon>KategoriEkle.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

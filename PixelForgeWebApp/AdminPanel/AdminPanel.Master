@@ -30,7 +30,7 @@
                     <a href="Default.aspx">
                         <li>Kategori Listesi</li>
                     </a>
-                    <a href="Default.aspx">
+                    <a href="KategoriEkle.aspx">
                         <li>Kategori Ekle</li>
                     </a>
                     <a href="Default.aspx">

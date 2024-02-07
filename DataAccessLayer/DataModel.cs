@@ -55,5 +55,32 @@ namespace DataAccessLayer
         }
 
         #endregion
+
+        #region Kategori Metotları
+
+        //oluşturduğumuz kategori nesnesi içindeki verileri, veri tabanına ekleyecek metot
+        //Metoda kategori nesnesi parametre olarak alınmalıdır
+        public bool KategoriEkle(Kategori kat)
+        {
+            try
+            {
+                cmd.CommandText = "INSERT INTO Kategoriler(Isim, Durum) VALUES(@i,@d)";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@i", kat.Isim);
+                cmd.Parameters.AddWithValue("@d", kat.Durum);
+                cmd.ExecuteNonQuery();//Sorgu geriye veri döndürmeyecek bu yüzden ExecuteNonQuery() Kullanılır
+                return true;//Eğer hata oluşmaz ise metodum çalıştırıldığı yere true sonucu döndürsün
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        #endregion
     }
 }

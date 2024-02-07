@@ -4,3 +4,9 @@ C:\Users\Alp\source\repos\PixelForgeWebApp\DataAccessLayer\obj\Debug\DataAccessL
 C:\Users\Alp\source\repos\PixelForgeWebApp\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
 C:\Users\Alp\source\repos\PixelForgeWebApp\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Users\Alp\source\repos\PixelForgeWebApp\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\Alp\Documents\GitHub\PixelForgeBlog\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Alp\Documents\GitHub\PixelForgeBlog\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Alp\Documents\GitHub\PixelForgeBlog\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\Alp\Documents\GitHub\PixelForgeBlog\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Alp\Documents\GitHub\PixelForgeBlog\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\Alp\Documents\GitHub\PixelForgeBlog\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
