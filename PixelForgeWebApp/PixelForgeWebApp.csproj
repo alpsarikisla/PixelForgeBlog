@@ -75,6 +75,7 @@
     <Content Include="AdminPanel\KategoriDuzenle.aspx" />
     <Content Include="AdminPanel\KategoriEkle.aspx" />
     <Content Include="AdminPanel\KategoriListele.aspx" />
+    <Content Include="AdminPanel\MakaleEkle.aspx" />
     <Content Include="AdminPanel\Resimler\loginbackground.jpg" />
     <Content Include="AdminPanel\Resimler\loginimage-01.png" />
     <Content Include="AdminPanel\Resimler\Wavy_Tech-28_Single-10.jpg" />
@@ -122,6 +123,13 @@
     </Compile>
     <Compile Include="AdminPanel\KategoriListele.aspx.designer.cs">
       <DependentUpon>KategoriListele.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\MakaleEkle.aspx.cs">
+      <DependentUpon>MakaleEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\MakaleEkle.aspx.designer.cs">
+      <DependentUpon>MakaleEkle.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

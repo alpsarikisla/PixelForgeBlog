@@ -23,6 +23,9 @@
 .formIcerik .satir{
     padding:5px;
 }
+.row{
+    margin-bottom:15px;
+}
 .metinKutu{
     padding:7px;
     margin-top:10px;
@@ -96,3 +99,13 @@
         background-color: #0094ff;
         color: white;
     }
+.solIcerik{
+    width:49%;
+    float:left;
+    margin-right:7px;
+}
+.sagIcerik {
+    width: 49%;
+    float: left;
+    margin-left: 7px;
+}
