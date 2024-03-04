@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -68,8 +69,112 @@ namespace DataAccessLayer
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@i", kat.Isim);
                 cmd.Parameters.AddWithValue("@d", kat.Durum);
+                con.Open();
                 cmd.ExecuteNonQuery();//Sorgu geriye veri döndürmeyecek bu yüzden ExecuteNonQuery() Kullanılır
                 return true;//Eğer hata oluşmaz ise metodum çalıştırıldığı yere true sonucu döndürsün
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public List<Kategori> KategorileriGetir()
+        {
+            try
+            {
+                List<Kategori> kategoriler = new List<Kategori>();
+                //Veritabanından gelen kategori bilgilerini nesneye döndürdükten sonra bu koleksiyona olduracağız.
+                //Böylece Veriler c# tarafından yönetilebilir ve filtrelenebilir olacak
+                cmd.CommandText = "SELECT ID, Isim, Durum FROM Kategoriler";
+                //Veritanındaki kategoriler tablosunun içinde bulunan ID,Isim,Durum kolonlarının verisini çekebilecek Query Yazıldı.
+                cmd.Parameters.Clear();//Yazılan sorgu parametre almasa bile bile hata oluşmaması için parametreleri temizliyoruz
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                //Yazılan sorgudan bir tablo verisi dönüyor ise Sorgu ExecuteReader ile çalıştırılmalıdır.
+                //SqlDataReader Sorgudan gelen tablo verilerini tutabilecek sınıftır. Ancak içindeki verilerin uygun türlere göre ayıklanması gerekir
+                while (reader.Read())//Read komutu SqlDataReader içerisinde okunmamış satır var ise true sonuç döndürür
+                {
+                    Kategori kat = new Kategori();
+                    //Veritabanından gelen her satır veriyi c# kısmında kategori nesnesine dönüştürüyoruz
+                    kat.ID = reader.GetInt32(0);//Yukarıdaki cmd.CommandText içerisine yazdığımız sorgudaki ID,Isim,Durum .kolonlarının "SORGU İÇERİSİNDEKİ" sırasına göre verileri 0. index,1. index,2. index olacak şekilde reader'dan ayıklıyoruz
+                    kat.Isim = reader.GetString(1);//Veritabanında isim kolonunun türü nvarchar(string) olduğu için Getstring komutu ile String türünde okuma gerleştiriyoruz
+                    kat.Durum = reader.GetBoolean(2);//Veritabanında kolon türü bit(bool) olduğu için getBoolean ile okuma gerçeştirdik
+                    kategoriler.Add(kat);//Oluşturulan kategori nesnesini kategoriler ismindeki koleksiyona ekledik. böylece kategori nesneleri bir arada ve düzenli olarak depolandı 
+                }
+                return kategoriler;
+                //Veritabanından gelen tüm kategori bilgileri ayıklanıp, nesneye dönüştürülüp, koleksiyona eklendikten sonra metodumuz çağırıldığı anda gönderilmek üzere return ile belirlendi
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public void KategoriSil(int id)
+        {
+            try
+            {
+                cmd.CommandText = "DELETE FROM Kategoriler WHERE ID=@id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public Kategori TekKategoriGetir(int id)
+        {
+            Kategori kat = new Kategori();
+            try
+            {
+                cmd.CommandText = "SELECT ID, Isim, Durum FROM Kategoriler WHERE ID=@id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    kat.ID = reader.GetInt32(0);
+                    kat.Isim = reader.GetString(1);
+                    kat.Durum = reader.GetBoolean(2);
+                }
+                return kat;
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public bool KategoriGuncelle(Kategori kat)
+        {
+            try
+            {
+                cmd.CommandText = "UPDATE Kategoriler SET Isim = @isim, Durum=@durum WHERE ID=@id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@isim", kat.Isim);
+                cmd.Parameters.AddWithValue("@durum", kat.Durum);
+                cmd.Parameters.AddWithValue("@id", kat.ID);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                return true;
             }
             catch
             {

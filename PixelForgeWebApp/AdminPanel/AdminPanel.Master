@@ -27,7 +27,7 @@
                     <a href="Default.aspx">
                         <li>Yönetim Paneli</li>
                     </a>
-                    <a href="Default.aspx">
+                    <a href="KategoriListele.aspx">
                         <li>Kategori Listesi</li>
                     </a>
                     <a href="KategoriEkle.aspx">

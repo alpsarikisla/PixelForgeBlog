@@ -11,7 +11,7 @@ namespace PixelForgeWebApp.AdminPanel
 {
 
 
-    public partial class KategoriEkle
+    public partial class KategoriDuzenle
     {
 
         /// <summary>
@@ -51,12 +51,21 @@ namespace PixelForgeWebApp.AdminPanel
         protected global::System.Web.UI.WebControls.TextBox tb_kategoriadi;
 
         /// <summary>
-        /// lbtn_ekle control.
+        /// cb_durum control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbtn_ekle;
+        protected global::System.Web.UI.WebControls.CheckBox cb_durum;
+
+        /// <summary>
+        /// lbtn_duzenle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbtn_duzenle;
     }
 }

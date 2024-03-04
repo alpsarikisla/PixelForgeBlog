@@ -1,20 +1,98 @@
 ﻿body {
 }
-.sayfabaslik
-{
-
+.formSayfabaslik {
+    border-bottom: 2px solid dimgray;
+    padding:10px 0;
 }
 .formTasiyici
 {
-
+    margin-top:20px;
 }
 .baslik
 {
-
+    background-color:#eeeeee;
+    padding:10px;
+    border:1px solid silver;
+    border-top-left-radius:7px;
+    border-top-right-radius:7px;
 }
 .formIcerik {
-
+    border: 1px solid silver;
+    padding:10px;
 }
 .formIcerik .satir{
+    padding:5px;
+}
+.metinKutu{
+    padding:7px;
+    margin-top:10px;
+    width:98%;
+    border-radius:5px;
+    border:1px solid silver;
+}
+.buton{
+    padding:10px 30px;
+    background-color:#00ae64;
+    color:white;
+    border-radius:5px;
+    text-decoration:none;
+    margin-right:20px;
+}
+.basariliPanel {
+    background-color: #80e9bc;
+    color: #0c6f45;
+    padding:15px;
+    border-radius:7px;
+    margin-bottom:15px;
+}
+.basarisizPanel {
+    background-color: #ffafaf;
+    color: #ff0000;
+    padding: 15px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
+.tablo
+{
+    width:100%;
+}
+.tablo tr
+{
 
 }
+    .tablo tr th {
+        padding: 10px;
+        border-bottom: 2px solid silver;
+        text-align: left;
+        border-left: 1px solid silver;
+        border-right: 1px solid silver;
+        border-top: 1px solid silver;
+        background-color: #f1ecec
+    }
+    .tablo tr td {
+        padding: 10px;
+        border-bottom: 1px solid silver;
+        border-left: 1px solid silver;
+        border-right: 1px solid silver;
+    }
+.secenekbuton{
+    padding: 5px 7px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+.sil{
+    background-color:#ffafaf;
+    color:darkred;
+}
+.sil:hover{
+    background-color:#ff6d6d;
+    color:white;
+}
+.duzenle {
+    background-color: #eeeeee;
+    color: dodgerblue;
+}
+    .duzenle:hover {
+        background-color: #0094ff;
+        color: white;
+    }
