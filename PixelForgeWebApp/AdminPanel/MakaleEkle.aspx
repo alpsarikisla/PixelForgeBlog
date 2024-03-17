@@ -20,7 +20,6 @@
             </asp:Panel>
 
             <div class="solIcerik">
-
                 <div class="row">
                     <label>Makale Başlık</label>
                     <asp:TextBox ID="tb_baslik" runat="server" CssClass="metinKutu"></asp:TextBox>

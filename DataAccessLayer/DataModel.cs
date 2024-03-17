@@ -187,5 +187,40 @@ namespace DataAccessLayer
         }
 
         #endregion
+
+        #region Makale Metotları
+
+        public bool MakaleEkle(Makale mak)
+        {
+            try
+            {
+                cmd.CommandText = "INSERT INTO Makaleler(Kategori_ID, Yazar_ID, Baslik, Ozet, Icerik, KapakResim, EklemeTarih, GoruntulemeSayi, BegeniSayi, BegeniOrani, Durum) VALUES(@kategori_ID, @yazar_ID, @baslik, @ozet, @icerik, @kapakResim, @eklemeTarih, @goruntulemeSayi, @begeniSayi, @begeniOrani, @durum)";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@kategori_ID", mak.Kategori_ID);
+                cmd.Parameters.AddWithValue("@yazar_ID", mak.Yazar_ID);
+                cmd.Parameters.AddWithValue("@baslik", mak.Baslik);
+                cmd.Parameters.AddWithValue("@ozet", mak.Ozet);
+                cmd.Parameters.AddWithValue("@icerik", mak.Icerik);
+                cmd.Parameters.AddWithValue("@kapakResim", mak.KapakResim);
+                cmd.Parameters.AddWithValue("@eklemeTarih", mak.EklemeTarihi);
+                cmd.Parameters.AddWithValue("@goruntulemeSayi", mak.GoruntulemeSayi);
+                cmd.Parameters.AddWithValue("@begeniSayi", mak.BegeniSayi);
+                cmd.Parameters.AddWithValue("@begeniOrani", mak.BegeniOrani);
+                cmd.Parameters.AddWithValue("@durum", mak.Durum);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        #endregion
     }
 }
