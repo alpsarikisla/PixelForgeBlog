@@ -1,3 +1,3 @@
-![alt text](http://url/to/giris.png)
-![alt text](http://url/to/kategoriEkleme.png)
-![alt text](http://url/to/MakaleEklemeEkrani.png)
+![alt text](https://github.com/alpsarikisla/PixelForgeBlog/blob/main/Giris.png)
+![alt text](https://github.com/alpsarikisla/PixelForgeBlog/blob/main/kategoriEkleme.png)
+![alt text]([http://url/to/MakaleEklemeEkrani.png](https://github.com/alpsarikisla/PixelForgeBlog/blob/main/MakaleEklemeEkrani.png)https://github.com/alpsarikisla/PixelForgeBlog/blob/main/MakaleEklemeEkrani.png)
