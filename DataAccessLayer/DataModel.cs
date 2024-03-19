@@ -220,6 +220,46 @@ namespace DataAccessLayer
                 con.Close();
             }
         }
+        
+        public List<Makale> MakaleListele()
+        {
+            try
+            {
+                List<Makale> makaleler = new List<Makale>();
+                cmd.CommandText = "SELECT M.ID, M.Kategori_ID, K.Isim, M.Yazar_ID, Y.KullaniciAdi, M.Baslik, M.Ozet, M.Icerik, M.KapakResim, M.EklemeTarih, M.GoruntulemeSayi,m.BegeniSayi, M.BegeniOrani, M.Durum FROM Makaleler AS M JOIN Kategoriler AS K ON M.Kategori_ID = K.ID JOIN Yoneticiler AS Y ON M.Yazar_ID = Y.ID";
+                cmd.Parameters.Clear();
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Makale mak = new Makale();
+                    mak.ID = reader.GetInt32(0);
+                    mak.Kategori_ID = reader.GetInt32(1);
+                    mak.Kategori = reader.GetString(2);
+                    mak.Yazar_ID = reader.GetInt32(3);
+                    mak.Yazar = reader.GetString(4);
+                    mak.Baslik = reader.GetString(5);
+                    mak.Ozet = reader.GetString(6);
+                    mak.Icerik = reader.GetString(7);
+                    mak.KapakResim = reader.GetString(8);
+                    mak.EklemeTarihi = reader.GetDateTime(9);
+                    mak.GoruntulemeSayi = reader.GetInt32(10);
+                    mak.BegeniSayi = reader.GetInt32(11);
+                    mak.BegeniOrani = reader.GetDecimal(12);
+                    mak.Durum = reader.GetBoolean(13);
+                    makaleler.Add(mak);
+                }
+                return makaleler;
+            }
+            catch(Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
 
         #endregion
     }
