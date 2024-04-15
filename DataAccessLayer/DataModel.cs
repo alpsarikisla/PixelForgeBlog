@@ -261,6 +261,72 @@ namespace DataAccessLayer
             }
         }
 
+        public Makale MakaleGetir(int id)
+        {
+            try
+            {
+                cmd.CommandText = cmd.CommandText = "SELECT M.ID, M.Kategori_ID, K.Isim, M.Yazar_ID, Y.KullaniciAdi, M.Baslik, M.Ozet, M.Icerik, M.KapakResim, M.EklemeTarih, M.GoruntulemeSayi,m.BegeniSayi, M.BegeniOrani, M.Durum FROM Makaleler AS M JOIN Kategoriler AS K ON M.Kategori_ID = K.ID JOIN Yoneticiler AS Y ON M.Yazar_ID = Y.ID WHERE M.ID =@id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                Makale mak = new Makale();
+                while (reader.Read())
+                {
+                    mak.ID = reader.GetInt32(0);
+                    mak.Kategori_ID = reader.GetInt32(1);
+                    mak.Kategori = reader.GetString(2);
+                    mak.Yazar_ID = reader.GetInt32(3);
+                    mak.Yazar = reader.GetString(4);
+                    mak.Baslik = reader.GetString(5);
+                    mak.Ozet = reader.GetString(6);
+                    mak.Icerik = reader.GetString(7);
+                    mak.KapakResim = reader.GetString(8);
+                    mak.EklemeTarihi = reader.GetDateTime(9);
+                    mak.GoruntulemeSayi = reader.GetInt32(10);
+                    mak.BegeniSayi = reader.GetInt32(11);
+                    mak.BegeniOrani = reader.GetDecimal(12);
+                    mak.Durum = reader.GetBoolean(13);
+                }
+                return mak;
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public bool MakaleDuzenle(Makale mak)
+        {
+            try
+            {
+                cmd.CommandText = "UPDATE Makaleler SET Kategori_ID=@kategori_ID, Baslik=@baslik, Ozet=@ozet, Icerik=@icerik, KapakResim=@kapakresim, Durum=@durum WHERE ID=@id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@kategori_ID", mak.Kategori_ID);
+                cmd.Parameters.AddWithValue("@baslik", mak.Baslik);
+                cmd.Parameters.AddWithValue("@ozet", mak.Ozet);
+                cmd.Parameters.AddWithValue("@icerik", mak.Icerik);
+                cmd.Parameters.AddWithValue("@kapakresim", mak.KapakResim);
+                cmd.Parameters.AddWithValue("@durum", mak.Durum);
+                cmd.Parameters.AddWithValue("@id", mak.ID);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch(Exception ex)
+            {
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
         #endregion
     }
 }
