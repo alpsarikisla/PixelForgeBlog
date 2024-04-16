@@ -1,0 +1,23 @@
+﻿*, h1,h2,h3,h4,h5,h6{
+    margin:0;padding:0;
+}
+body {
+    font-family:Calibri;
+}
+.container{
+    width:1200px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.mainheader{
+    padding:20px 0px;
+    border-bottom:1px solid silver;
+    color:dimgray;
+}
+.mainheader .brand{
+
+}
+.mainheader .userpanel
+{
+
+}

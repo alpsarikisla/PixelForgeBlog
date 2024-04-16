@@ -81,6 +81,8 @@
     <Content Include="AdminPanel\Resimler\loginbackground.jpg" />
     <Content Include="AdminPanel\Resimler\loginimage-01.png" />
     <Content Include="AdminPanel\Resimler\Wavy_Tech-28_Single-10.jpg" />
+    <Content Include="css\Main.css" />
+    <Content Include="Default.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -147,11 +149,26 @@
     <Compile Include="AdminPanel\MakaleListele.aspx.designer.cs">
       <DependentUpon>MakaleListele.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminPanel\AdminPanel.Master" />
     <None Include="packages.config" />
+    <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
