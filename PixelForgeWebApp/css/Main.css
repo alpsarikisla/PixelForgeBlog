@@ -15,9 +15,48 @@ body {
     color:dimgray;
 }
 .mainheader .brand{
-
+    font-size:15pt;
 }
 .mainheader .userpanel
 {
 
 }
+.categoryContainer{
+    padding:10px 0px;
+    border-bottom:1px solid silver;
+}
+.categoryContainer a{
+    text-decoration:none;
+    padding-right:10px;
+    color:darkslategrey;
+}
+    .categoryContainer a:hover {
+        color:darkgreen;
+    }
+    .contentContainer{
+        width:900px;
+        float:left;
+        margin-top:10px;
+    }
+.adContainer{
+    width:200px;
+    padding:10px;
+    float:right;
+}
+.contentContainer .article {
+    margin-top:20px;
+    border-bottom:1px solid #efefef;
+}
+.contentContainer .article .title{
+    color:dimgray;
+}
+    .contentContainer .article img {
+        width: 98%;
+        margin:10px;
+    }
+    .contentContainer .article .infocontainer {
+        border-top: 1px solid silver;
+        border-bottom: 1px solid silver;
+        padding:10px 0;
+        color:dimgray;
+    }

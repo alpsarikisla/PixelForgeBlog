@@ -83,6 +83,13 @@
     <Content Include="AdminPanel\Resimler\Wavy_Tech-28_Single-10.jpg" />
     <Content Include="css\Main.css" />
     <Content Include="Default.aspx" />
+    <Content Include="ReklamGorselleri\120x600.gif" />
+    <Content Include="ReklamGorselleri\160x600.gif" />
+    <Content Include="ReklamGorselleri\250x250.gif" />
+    <Content Include="ReklamGorselleri\300x250.gif" />
+    <Content Include="ReklamGorselleri\336x280.gif" />
+    <Content Include="ReklamGorselleri\468x60.gif" />
+    <Content Include="ReklamGorselleri\728x90.gif" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
